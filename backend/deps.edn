@@ -6,6 +6,9 @@
         ring/ring-jetty-adapter {:mvn/version "1.11.0"}
         compojure/compojure {:mvn/version "1.7.0"}
         selmer/selmer {:mvn/version "1.12.50"}
+        clj-http/clj-http {:mvn/version "3.12.3"}
+        org.jsoup/jsoup {:mvn/version "1.17.2"}
+        org.slf4j/slf4j-simple {:mvn/version "2.0.7"}
         cheshire/cheshire {:mvn/version "5.11.0"}}
  :aliases
  {:run-m {:main-opts ["-m" "jagers.backend"]}

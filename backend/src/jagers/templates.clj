@@ -5,4 +5,4 @@
 (selmer/set-resource-path! "templates")
 
 (defn render-template [template data]
-  (selmer/render-file  (str template) data))
+  (selmer/render-file template data))
