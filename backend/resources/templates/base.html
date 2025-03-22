@@ -6,7 +6,12 @@
     <header>
       <h1>Welcome to Jagers</h1>
     </header>
-
+    <div>
+        <form action="/wiki" method="get">
+            <input type="text" name="search" placeholder="Search.."/>
+            <input type="submit" value="Search"/>
+            <a href="/wiki">Home</a>
+        </form>
     <main>{% block content %}Default content{% endblock %}</main>
 
     <footer>
