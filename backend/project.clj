@@ -1,5 +1,5 @@
-(defproject jagers/backend "0.1.0-SNAPSHOT"
-  :description "Your project description"
+(defproject jagers "0.1.0-SNAPSHOT"
+  :description "Simple http server, with scraping and templating"
   :dependencies [[org.clojure/clojure "1.12.0"]
                  [ring/ring-core "1.11.0"]
                  [ring/ring-json "0.5.1"]
@@ -23,7 +23,7 @@
             "test" ["test"]}
   
   :main jagers.core
-  :source-paths ["src" "resources"]
+  :source-paths ["src"]
   :profiles {:dev {:main jagers.core/-dev-main
                    :dependencies [[org.clojure/test.check "1.1.1"]]
                    :source-paths ["src" "resources"]
