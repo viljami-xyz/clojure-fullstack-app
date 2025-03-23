@@ -6,4 +6,6 @@
 (selmer.parser/cache-off!)
 
 (defn render-template [template data]
-  (selmer/render-file template data))
+  (let [output (selmer/render-file template data)]
+    (println (take 5 (:content data)))
+    output))

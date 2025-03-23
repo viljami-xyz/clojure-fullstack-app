@@ -1,5 +1,8 @@
 <html>
-  <head>
+  <head
+      >
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Default Title{% endblock %}</title>
   </head>
   <body>
@@ -8,12 +11,10 @@
     </header>
     <div>
         <form action="/wiki" method="get">
-            <input type="text" name="search" placeholder="Search.."/>
-            <input type="submit" value="Search"/>
-            <a href="/wiki">Home</a>
+            <input type="text" name="search" placeholder="Search for a product">
+            <input type="submit" value="Search">
         </form>
     <main>{% block content %}Default content{% endblock %}</main>
-
     <footer>
       <p>Powered by Clojure & Selmer</p>
     </footer>

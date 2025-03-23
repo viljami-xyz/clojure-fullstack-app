@@ -12,16 +12,15 @@
                  [org.jsoup/jsoup "1.17.2"]
                  [org.slf4j/slf4j-simple "2.0.7"]
                  [cheshire "5.11.0"]]
-  
-  :plugins [[lein-ring "0.12.6"]
-            ]
+
+  :plugins [[lein-ring "0.12.6"]]
 
   :ring {:handler jagers.backend/app}  ;; Update if needed
 
   :aliases {"run-m" ["trampoline" "run" "-m" "jagers.backend"]
             "run-x" ["trampoline" "exec" "-ns" "jagers.backend" "-e" "(greet {:name \"Clojure\"})"]
             "test" ["test"]}
-  
+
   :main jagers.core
   :source-paths ["src"]
   :profiles {:dev {:main jagers.core/-dev-main
