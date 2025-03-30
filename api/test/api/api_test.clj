@@ -1,6 +1,6 @@
-(ns jagers.backend-test
+(ns api.api-test
   (:require [clojure.test :refer :all]
-            [jagers.backend :refer :all]))
+            [api.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

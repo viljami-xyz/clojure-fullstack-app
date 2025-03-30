@@ -1,4 +1,4 @@
-(ns jagers.scrape
+(ns api.scrape
   (:require [clj-http.client :as http]
             [clojure.string :as str])
   (:import [org.jsoup Jsoup]))

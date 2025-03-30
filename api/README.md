@@ -1,10 +1,10 @@
-# jagers/backend
+# api
 
 FIXME: my new application.
 
 ## Installation
 
-Download from https://github.com/jagers/backend
+Download from https://github.com/viljami-xyz/clojure-fullstack-app
 
 ## Usage
 
@@ -20,7 +20,7 @@ Run the project, overriding the name to be greeted:
     $ clojure -X:run-x :name '"Someone"'
     Hello, Someone!
 
-Run the project directly, via `:main-opts` (`-m jagers.backend`):
+Run the project directly, via `:main-opts` (`-m api.backend`):
 
     $ clojure -M:run-m
     Hello, World!
@@ -48,7 +48,7 @@ from `build.clj`.
 
 Run that uberjar:
 
-    $ java -jar target/net.clojars.jagers/backend-0.1.0-SNAPSHOT.jar
+    $ java -jar target/net.clojars.api/backend-0.1.0-SNAPSHOT.jar
 
 ## Options
 

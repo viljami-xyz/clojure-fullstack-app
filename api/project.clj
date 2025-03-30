@@ -1,4 +1,4 @@
-(defproject jagers "0.1.0-SNAPSHOT"
+(defproject api "0.1.0-SNAPSHOT"
   :description "Simple http server, with scraping and templating"
   :dependencies [[org.clojure/clojure "1.12.0"]
                  [ring/ring-core "1.11.0"]
@@ -15,15 +15,15 @@
 
   :plugins [[lein-ring "0.12.6"]]
 
-  :ring {:handler jagers.backend/app}  ;; Update if needed
+  :ring {:handler api.api/app}  ;; Update if needed
 
-  :aliases {"run-m" ["trampoline" "run" "-m" "jagers.backend"]
-            "run-x" ["trampoline" "exec" "-ns" "jagers.backend" "-e" "(greet {:name \"Clojure\"})"]
+  :aliases {"run-m" ["trampoline" "run" "-m" "api.api"]
+            "run-x" ["trampoline" "exec" "-ns" "api.api" "-e" "(greet {:name \"Clojure\"})"]
             "test" ["test"]}
 
-  :main jagers.core
-  :source-paths ["src"]
-  :profiles {:dev {:main jagers.core/-dev-main
+  :main api.core
+  :source-paths ["src/api"]
+  :profiles {:dev {:main api.core/-dev-main
                    :dependencies [[org.clojure/test.check "1.1.1"]]
                    :source-paths ["src" "resources"]
                    :test-paths ["test"]}

@@ -1,4 +1,4 @@
-(ns jagers.templates
+(ns api.templates
   (:require [selmer.parser :as selmer]))
 
 ;; Ensure that the template is in the resources directory

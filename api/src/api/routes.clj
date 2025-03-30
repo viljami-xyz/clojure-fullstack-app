@@ -1,9 +1,8 @@
-(ns jagers.routes
+(ns api.routes
   (:require [compojure.core :refer [defroutes GET POST PUT]]
             [cheshire.core :as json]
-            [selmer.parser :as selmer]
-            [jagers.templates :as jtemp]
-            [jagers.scrape :as scrape]))
+            [api.templates :as jtemp]
+            [api.scrape :as scrape]))
 
 (defroutes app
   (GET "/favicon.ico" []

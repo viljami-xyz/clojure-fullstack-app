@@ -1,9 +1,9 @@
-(ns jagers.core
+(ns api.core 
   (:require [ring.adapter.jetty :as jetty]
             [ring.middleware.params :refer [wrap-params]]
             [ring.middleware.reload :refer [wrap-reload]]
             [ring.middleware.refresh :as refresh]
-            [jagers.routes :refer [app]]))
+            [api.routes :refer [app]]))
 
 
 (defn -main []
