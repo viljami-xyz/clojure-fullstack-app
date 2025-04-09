@@ -1,19 +1,48 @@
 <html>
-  <head
-      >
-      <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
     <title>{% block title %}Default Title{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="/css/style.css"
+    />
+    <script
+      src="/js/search.js"
+      defer
+    ></script>
   </head>
   <body>
     <header>
-      <h1>Welcome to Jagers</h1>
+      <h1>Welcome to WikiRelatives</h1>
     </header>
-    <div>
-        <form action="/wiki" method="get">
-            <input type="text" name="search" placeholder="Search for a product">
-            <input type="submit" value="Search">
-        </form>
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <input
+          type="text"
+          id="search-first"
+          placeholder="Set First Relative"
+        />
+        <input
+          type="text"
+          id="search-second"
+          placeholder="Set Second Relative"
+        />
+      </div>
+      <div class="search-button-wrapper">
+        <button id="search-button">Search</button>
+        <button id="clear-button">Close</button>
+      </div>
+    </div>
+    <div class="results-wrapper">
+      <ul
+        id="search-results"
+        class="results-container"
+      ></ul>
+    </div>
     <main>{% block content %}Default content{% endblock %}</main>
     <footer>
       <p>Powered by Clojure & Selmer</p>
