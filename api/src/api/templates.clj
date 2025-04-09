@@ -7,5 +7,4 @@
 
 (defn render-template [template data]
   (let [output (selmer/render-file template data)]
-    (println (take 5 (:content data)))
     output))

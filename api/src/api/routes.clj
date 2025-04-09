@@ -1,5 +1,5 @@
 (ns api.routes
-  (:require [compojure.core :refer [defroutes GET POST PUT]]
+  (:require [compojure.core :refer [defroutes GET]]
             [cheshire.core :as json]
             [api.templates :as jtemp]
             [api.scrape :as scrape]))
