@@ -5,15 +5,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1"
     />
-    <title>{% block title %}Default Title{% endblock %}</title>
+    <title>{% block title %}WikiRelatives{% endblock %}</title>
     <link
       rel="stylesheet"
       href="/css/style.css"
     />
-    <script
-      src="/js/search.js"
-      defer
-    ></script>
   </head>
   <body>
     <header>
@@ -24,11 +20,13 @@
         <input
           type="text"
           id="search-first"
+          data-pageid="0"
           placeholder="Set First Relative"
         />
         <input
           type="text"
           id="search-second"
+          data-pageid="0"
           placeholder="Set Second Relative"
         />
       </div>
@@ -43,9 +41,19 @@
         class="results-container"
       ></ul>
     </div>
-    <main>{% block content %}Default content{% endblock %}</main>
+    <main>
+        <div id="result-first"></div>
+        <div id="result-second"></div>
+
+        {% block content %}
+        {% endblock %}
+    </main>
     <footer>
       <p>Powered by Clojure & Selmer</p>
     </footer>
+    <script
+            src="/js/main.js"
+            type="module">
+    </script>
   </body>
 </html>

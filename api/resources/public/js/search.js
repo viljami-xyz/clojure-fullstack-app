@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+export function initSearch() {
   const inputs = [
     document.getElementById('search-first'),
     document.getElementById('search-second'),
@@ -41,11 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
           const title = button.querySelector('h3').innerText;
           const image = button.querySelector('img').src;
-          const description = button.querySelector(
-            '#result-description'
-          ).innerText;
-          const pageid = button.querySelector('#result-description').dataset
-            .pageid;
+          const description = button.querySelector('#result-description').innerText;
+          const pageid = button.querySelector('#result-description').dataset.pageid;
 
           input.value = title;
           input.setAttribute('data-pageid', pageid);
@@ -65,4 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
     results.innerHTML = '';
     clearButton.style.display = 'none';
   });
-});
+};

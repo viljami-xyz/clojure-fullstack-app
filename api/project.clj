@@ -11,6 +11,7 @@
                  [clj-http "3.12.3"]
                  [org.jsoup/jsoup "1.17.2"]
                  [org.slf4j/slf4j-simple "2.0.7"]
+                 [utils "0.1.0-SNAPSHOT"]
                  [cheshire "5.11.0"]]
 
   :plugins [[lein-ring "0.12.6"]]
@@ -22,7 +23,7 @@
             "test" ["test"]}
 
   :main api.core
-  :source-paths ["src/api"]
+  :source-paths ["src/api", "../utils/src"]
   :profiles {:dev {:main api.core/-dev-main
                    :dependencies [[org.clojure/test.check "1.1.1"]]
                    :source-paths ["src" "resources"]
